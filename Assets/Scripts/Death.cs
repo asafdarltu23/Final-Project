@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Death : MonoBehaviour
@@ -7,10 +8,14 @@ public class Death : MonoBehaviour
     public static bool dead;
     public Transform playerObject;
     public Vector3 startPoint;
+    //public Transform Camera;
+    //private Vector3 CamPosOrig;
+    //private Quaternion CamRotOrig;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //CamPosOrig = Camera.transform.position;
+        //CamRotOrig = Camera.transform.rotation;
     }
 
     // Update is called once per frame
@@ -24,6 +29,9 @@ public class Death : MonoBehaviour
         if (dead == true)
         {
             Kill();
+            //Camera.transform.position = CamPosOrig;
+            //Camera.transform.rotation = CamRotOrig;
+            //CameraTurn.ResetCam = true;
             dead = false;
         }
     }

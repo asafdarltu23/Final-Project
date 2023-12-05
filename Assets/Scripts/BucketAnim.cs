@@ -27,12 +27,20 @@ public class BucketAnim : MonoBehaviour
         {
             yield return new WaitForSeconds(waitTime);
             anim.SetBool("Go", true);
-            agua.gameObject.SetActive(true);
-            hb.gameObject.SetActive(true);
             yield return new WaitForSeconds(waitTime);
             anim.SetBool("Go", false);
-            agua.gameObject.SetActive(false);
-            hb.gameObject.SetActive(false);
         }
+    }
+
+    public void ActivateHB()
+    {
+        agua.gameObject.SetActive(true);
+        hb.gameObject.SetActive(true);
+    }
+
+    public void DeactivateHB()
+    {
+        agua.gameObject.SetActive(false);
+        hb.gameObject.SetActive(false);
     }
 }

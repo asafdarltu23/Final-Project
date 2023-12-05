@@ -16,6 +16,8 @@ public class FinishScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene("Continue");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

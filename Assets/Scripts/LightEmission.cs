@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -20,16 +21,17 @@ public class LightEmission : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKey(KeyCode.Q))
         {
             lighting.range = lightrange;
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            PlayerMovement.LightEmitting = true;
             DustPart.gameObject.SetActive(true);
         }
         else
         {
             lighting.range = 5;
             DustPart.gameObject.SetActive(false);
+            PlayerMovement.LightEmitting = false;
         }
     }
 }
