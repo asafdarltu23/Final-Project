@@ -8,6 +8,7 @@ public class Death : MonoBehaviour
     public static bool dead;
     public Transform playerObject;
     public Vector3 startPoint;
+    Rigidbody rb;
     //public Transform Camera;
     //private Vector3 CamPosOrig;
     //private Quaternion CamRotOrig;
@@ -16,6 +17,7 @@ public class Death : MonoBehaviour
     {
         //CamPosOrig = Camera.transform.position;
         //CamRotOrig = Camera.transform.rotation;
+        rb = playerObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -38,9 +40,8 @@ public class Death : MonoBehaviour
 
     public void Kill()
     {
-        playerObject.transform.position = startPoint;
-        Rigidbody rb = playerObject.GetComponent<Rigidbody>();
         rb.velocity = Vector3.zero;
+        playerObject.transform.position = startPoint;
         Debug.Log("Reset");
     }
 }

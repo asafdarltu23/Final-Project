@@ -32,6 +32,7 @@ public class BucketAnim : MonoBehaviour
         }
     }
 
+    //Remember to have this script in the actual bucket object being animated to be able to access these functions in the events tab
     public void ActivateHB()
     {
         agua.gameObject.SetActive(true);
