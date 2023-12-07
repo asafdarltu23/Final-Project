@@ -25,4 +25,9 @@ public class MenuScript : MonoBehaviour
         if (PlayerPrefs.GetFloat("Completes") == 2)
             SceneManager.LoadScene("EndScreen");
     }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene(Death.currentLevel);
+    }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -9,15 +10,12 @@ public class Death : MonoBehaviour
     public Transform playerObject;
     public Vector3 startPoint;
     Rigidbody rb;
-    //public Transform Camera;
-    //private Vector3 CamPosOrig;
-    //private Quaternion CamRotOrig;
+    public static string currentLevel;
     // Start is called before the first frame update
     void Start()
     {
-        //CamPosOrig = Camera.transform.position;
-        //CamRotOrig = Camera.transform.rotation;
         rb = playerObject.GetComponent<Rigidbody>();
+        currentLevel = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -40,8 +38,9 @@ public class Death : MonoBehaviour
 
     public void Kill()
     {
-        rb.velocity = Vector3.zero;
-        playerObject.transform.position = startPoint;
+       // rb.velocity = Vector3.zero;
+        //playerObject.transform.position = startPoint;
+        SceneManager.LoadScene("Death");
         Debug.Log("Reset");
     }
 }

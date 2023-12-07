@@ -757,6 +757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeDisplay: {fileID: 207373747}
   ScoreDisplay: {fileID: 1618050813}
+  FinalScoreDisplay: {fileID: 0}
+  FinalTimeDisplay: {fileID: 0}
 --- !u!4 &908883485
 Transform:
   m_ObjectHideFlags: 0
@@ -1038,7 +1040,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Return
+  m_text: Quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
