@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         else
             rb.drag = 0;*/
 
-        if (LightEmitting == false)
+        if (LightEmitting == false && Death.dead == false)
         {
             PlayerMoveRelative();
             /*float xMov = Input.GetAxis("Horizontal");

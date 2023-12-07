@@ -52,7 +52,7 @@ public class EnemyBehavior : MonoBehaviour
                 Physics.Raycast(this.transform.position + new Vector3(0, -1, 0), facing, minObstacleDistance))
             //!Physics.Raycast(this.transform.position + raycastOffset, Vector3.down, 1
             {
-                
+                rb.velocity = Vector3.zero;
                 Flip();
             }
             
@@ -101,6 +101,7 @@ public class EnemyBehavior : MonoBehaviour
         }
         if (other.CompareTag("Edge"))
         {
+            rb.velocity = Vector3.zero;
             Flip();
         }
         if (other.CompareTag("AirEnemyTurn"))

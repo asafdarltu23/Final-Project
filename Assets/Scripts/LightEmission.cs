@@ -29,7 +29,7 @@ public class LightEmission : MonoBehaviour
         }
         else
         {
-            lighting.range = 5;
+            lighting.range = 10;
             DustPart.gameObject.SetActive(false);
             PlayerMovement.LightEmitting = false;
         }

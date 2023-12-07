@@ -20,5 +20,6 @@ public class Score : MonoBehaviour
         score += value;
         scoreDisplay.text = score.ToString();
         PlayerPrefs.SetString("Score", score.ToString());
+        PlayerPrefs.SetFloat("ScoreVal", PlayerPrefs.GetFloat("ScoreVal") + 1);
     }
 }

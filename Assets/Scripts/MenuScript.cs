@@ -17,4 +17,12 @@ public class MenuScript : MonoBehaviour
         Debug.Log("Exited");
         Application.Quit();
     }
+
+    public void NextLevel()
+    {
+        if (PlayerPrefs.GetFloat("Completes") == 1)
+            SceneManager.LoadScene("LevelSecond");
+        if (PlayerPrefs.GetFloat("Completes") == 2)
+            SceneManager.LoadScene("EndScreen");
+    }
 }

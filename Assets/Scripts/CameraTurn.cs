@@ -24,6 +24,8 @@ public class CameraTurn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Death.dead == false)
+        {
             Vector3 viewDirect = Player.position - new Vector3(transform.position.x, Player.position.y, transform.position.z);
             orientation.forward = viewDirect.normalized;
 
@@ -35,5 +37,7 @@ public class CameraTurn : MonoBehaviour
             {
                 playerObj.forward = Vector3.Slerp(playerObj.forward, inputDirect.normalized, Time.deltaTime * rotationspeed);
             }
+
+        }
     }
 }
